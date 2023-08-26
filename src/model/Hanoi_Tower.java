@@ -19,13 +19,9 @@ public class Hanoi_Tower {
     }
 
     private void initializeDiscs() {
-        // Read the number of discs from a text file
+        
         LinkedList<Integer> discNumbers = readDiscNumbers();
-
-        // Get the number of discs based on the difficulty level
         int numberOfDiscs = discNumbers.get(difficultyLevel - 1);
-
-        // Create the discs and stack them on peg A
         for (int i = numberOfDiscs; i > 0; i--) {
             Disc disc = new Disc(i);
             pegA.stackDisc(disc);
@@ -57,10 +53,10 @@ public class Hanoi_Tower {
         Disc sourceDisc = source.viewTopDisc();
         Disc destinationDisc = destination.viewTopDisc();
         if (sourceDisc == null) {
-            return false; // There's no disc on the source peg
+            return false; 
         }
         if (destinationDisc == null) {
-            return true; // The destination peg is empty, any disc can be moved
+            return true; 
         }
         return sourceDisc.getSize() < destinationDisc.getSize();
     }
