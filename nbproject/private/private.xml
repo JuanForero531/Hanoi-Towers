@@ -4,7 +4,7 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/archivos_creados_Java/Hanoi_Tower/src/view/Viewer.java</file>
-            <file>file:/C:/archivos_creados_Java/Hanoi_Tower/src/presenter/Presenter.java</file>
+            <file>file:/C:/archivos_creados_Java/Hanoi_Tower/src/controller/Presenter.java</file>
             <file>file:/C:/archivos_creados_Java/Hanoi_Tower/src/model/Hanoi_Tower.java</file>
         </group>
     </open-files>
