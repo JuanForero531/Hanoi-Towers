@@ -12,7 +12,7 @@ public class Model {
     }
     private LinkedList<Integer> loadDiskNumbers() {
         LinkedList<Integer> numbers = new LinkedList<>();
-        try (BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\vfghjkl\\IdeaProjects\\Hanoi_tower0\\src\\model\\disc_numbers.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("src\\model\\disc_numbers.txt"))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 numbers.add(Integer.parseInt(line));
