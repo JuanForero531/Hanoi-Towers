@@ -1,39 +1,74 @@
 package model;
+import java.awt.*;
+public class Disco {
+    private int x;
+    private int y;
+    private int posXOriginal;
+    private int posYOriginal;
+    private int posXAnterior;
+    private int posYAnterior;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.LinkedList;
-import java.util.Stack;
-public class Model {
-    private LinkedList<Integer> diskNumbers;
-    public Model() {
-        diskNumbers = loadDiskNumbers();
+    private Color color;
+    private int width;
+    private int height;
+
+    public Disco(){
+
     }
-    private LinkedList<Integer> loadDiskNumbers() {
-        LinkedList<Integer> numbers = new LinkedList<>();
-        try (BufferedReader reader = new BufferedReader(new FileReader("src\\model\\disc_numbers.txt"))) {
-            String line;
-            while ((line = reader.readLine()) != null) {
-                numbers.add(Integer.parseInt(line));
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return numbers;
+    public Disco(int x, int y, Color color, int width, int height) {
+        this.x = x;
+        this.y = y;
+        this.color = color;
+        this.width = width;
+        this.height = height;
+        this.posXOriginal = x;
+        this.posYOriginal = y;
     }
-    public LinkedList<Integer> getDiskNumbers() {
-        return diskNumbers;
+    public int getX() {
+        return x;
     }
-    public void solveHanoi(int n, Stack<Character> fromRod, Stack<Character> toRod, Stack<Character> auxRod) {
-        if (n == 1) {
-            char from = fromRod.pop();
-            char to = toRod.push(from);
-        } else {
-            solveHanoi(n - 1, fromRod, auxRod, toRod);
-            char from = fromRod.pop();
-            char to = toRod.push(from);
-            solveHanoi(n - 1, auxRod, toRod, fromRod);
-        }
+    public int getPosXAnterior() {
+        return posXAnterior;
     }
+    public int getPosYAnterior() {
+        return posYAnterior;
+    }
+    public int getPosXOriginal() {
+        return posXOriginal;
+    }
+
+    public int getPosYOriginal() {
+        return posYOriginal;
+    }
+    public void setPosXAnterior(int posXAnterior) {
+        this.posXAnterior = posXAnterior;
+    }
+
+    public void setPosYAnterior(int posYAnterior) {
+        this.posYAnterior = posYAnterior;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public Color getColor() {
+        return color;
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public void setPosicion(int x, int y) {
+        posXAnterior = this.x;
+        posYAnterior = this.y;
+        this.x = x;
+        this.y = y;
+    }
+
 }
