@@ -1,0 +1,6 @@
+Beginners:3
+Novice:4
+Intermediate:6
+Advanced:7
+Expert:9
+Master:10
