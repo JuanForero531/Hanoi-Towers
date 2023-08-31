@@ -26,7 +26,7 @@ public class View extends JPanel {
            //nuevo
            if (discoSeleccionado != null) {
                     int distanciaX = Math.abs(e.getX() - 350);
-                    if (discoSeleccionado.getColor() == Color.BLUE && distanciaX <= 10) {
+                    if (discoSeleccionado.getColor() == Color.RED && distanciaX <= 10) {
                         juegoGanado = true;
                         repaint();
                     }
